@@ -27,7 +27,9 @@ Blog::Application.routes.draw do
   #     end
   #   end
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
   # Example resource route with sub-resources:
   #   resources :products do
