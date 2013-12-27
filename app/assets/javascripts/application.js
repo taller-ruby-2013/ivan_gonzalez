@@ -15,3 +15,5 @@
 //= require turbolinks
 //= require_tree .
 //= require twitter/bootstrap 
+//= require jquery.validate.min
+//= require additional-methods.min

@@ -39,3 +39,7 @@
   margin-bottom: 15px;
   padding: 7px 9px;
 }
+
+.error-color {
+  color: rgb(185, 74, 72);
+}

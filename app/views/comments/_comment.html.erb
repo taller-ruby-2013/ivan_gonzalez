@@ -1,16 +1,11 @@
-<h2>Comentarios</h2>
-<p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
-</p>
- 
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
-</p>
-
-<p>
-  <%= link_to 'Destroy Comment', [comment.post, comment],
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
-</p>
+<div class="post-comment">
+	<header>
+  		<strong><%= comment.commenter %></strong><small><em> Comentó:</em></small>
+	</header>
+	<div class="content">
+  		<%= comment.body %>		
+	</div>
+	<footer>
+	  <%= link_to 'Eliminar', [comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' } %>		
+	</footer>
+</div>

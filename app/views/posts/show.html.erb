@@ -1,16 +1,31 @@
-<%= link_to "Volver", posts_path %>
-<%= link_to 'Edit', edit_post_path(@post) %>
-<p>
-	<strong>Title:</strong>
-	<%= @post.title %>
-</p>
-<p>
-	<strong>Text:</strong>
-	<%= @post.text %>
-</p>
-
-<%= render "comments/form" %>
-<%= render @post.comments %>
+<div class="row">
+	<div class="col-md-8">
+		<div class="page-header">
+			<h2>
+				<%= @post.title %>
+				<small>
+					<%= link_to 'Editar', edit_post_path(@post) %>					
+				</small>			
+			</h2>
+		</div>	
+		<p>
+			<%= @post.text %>
+		</p>		
+	<hr>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-7">
+		<%= render "comments/form" %>
+		<hr>							
+	</div>	
+</div>
+<div class="row">
+	<div class="col-md-8">
+		<h3>Comentarios</h3>
+		<%= render @post.comments %>					
+	</div>
+</div>
 
 
 

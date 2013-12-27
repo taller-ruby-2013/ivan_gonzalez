@@ -1,25 +1,28 @@
-<%= form_for @post do |f|%>
-<% if @post.errors.any? %>
-	<div id="errorExplanation">
-		<h2><%= pluralize(@post.errors.count, "error")%> founded:</h2>
-		<ul>
-		    <% @post.errors.full_messages.each do |msg| %>
-		      <li style="color:red;"><%= msg %></li>
-		    <% end %>
-	    </ul>
-	</div>	
-<% end %>
+<%= form_for( @post, :html => {:role => "form", :class => "form-horizontal"}) do |f|%>
+<div class="form-group">
+	<%= f.label :title, "Título", :class => "col-sm-2 control-label" %>
+	<div class="col-sm-8">
+		<%= f.text_field :title, :class => "form-control" %>					
+	</div>
+	<% if @post.errors[:title] %>
+ 		<span class="error-color"><%= @post.errors[:title][0] %></span>
+	<% end %>
+</div>
 
-<p>
-	<%= f.label :title %><br>
-	<%= f.text_field :title %>
-</p>
-<p>
-	<%= f.label :text %><br>
-	<%= f.text_area :text %>
-</p>
-<p>
-	<%= f.submit %>
-</p>
-<% end %>
+<div class="form-group">
+	<%= f.label :text, "Texto",:class => "col-sm-2 control-label"%>
+	<div class="col-sm-8">
+		<%= f.text_area :text,  :class => "form-control", :rows => "10"%>	
+	</div>
+	<% if @post.errors[:text] %>
+ 		<span class="error-color"><%= @post.errors[:text][0] %></span>
+	<% end %>
+</div>
 
+<div class="form-group">
+	<div class="col-sm-offset-2 col-sm-8">
+		<%= f.submit "Publicar", :class => "btn btn-primary"  %>	
+		<%= link_to 'Cancelar', posts_path, :class => "btn btn-default" %>			
+	</div>
+</div>
+<% end %>
