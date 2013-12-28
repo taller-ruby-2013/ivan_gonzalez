@@ -29,5 +29,6 @@ $(document).ready(function() {
 		success: function (e) {
 			$(e).closest('.form-control').removeClass('has-error').addClass('has-success');
 			$(e).remove();
-		},  
+		}, 
+	}); 
 });
