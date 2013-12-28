@@ -11,6 +11,7 @@ $(document).ready(function() {
       rules : {
         'post[title]': {
           required: true,
+          minlength: 5
         },
         'post[text]': {
           required: true,
@@ -18,7 +19,8 @@ $(document).ready(function() {
       },
       messages: {
         'post[title]': {
-          required: 'Este campo no puede ir vacío'
+          required: 'Este campo no puede ir vacío',
+          minlength: 'Mínimo de cinco caracteres para el título'
         },
         'post[text]': {
           required: 'Este campo no puede ir vacío',

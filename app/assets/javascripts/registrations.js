@@ -12,6 +12,7 @@ $(document).ready(function() {
 			},
 			'user[password]': {
 			  required: true,
+			  minlength: 8
 			},
 			'user[password_confirmation]': {
 			  required: true,
@@ -25,6 +26,7 @@ $(document).ready(function() {
 			},
 			'user[password]': {
 			  required: 'Este campo no puede ir vacío',
+			  minlength: 'La contraseña debe tener mínimo 8 caracteres'
 			},
 			'user[password_confirmation]': {
 			  required: 'Este campo no puede ir vacío',
