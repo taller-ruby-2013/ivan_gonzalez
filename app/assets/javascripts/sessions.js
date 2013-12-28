@@ -1,8 +1,7 @@
 $(document).ready(function() {
 	$('#new_user').validate({
 		errorElement: 'span',
-		errorElement: 'span',
-		errorClass: 'error-color',
+		errorClass: 'span-block error-color',
 		focusInvalid: false,
 		onclick: false,
 		onkeyup: false,

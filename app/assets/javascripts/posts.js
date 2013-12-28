@@ -4,7 +4,7 @@ $(document).ready(function() {
   	//validación formularios
     $('#new_post').validate({
       errorElement: 'span',
-      errorClass: 'error-color',
+      errorClass: 'span-block error-color',
       focusInvalid: false,
       onclick: false,
       onkeyup: false,
@@ -36,7 +36,7 @@ $(document).ready(function() {
 
   	$('[id^="edit"]').validate({
   		errorElement: 'span',
-  		errorClass: 'error-color',
+  		errorClass: 'span-block error-color',
   		focusInvalid: false,
   		onclick: false,
   		onkeyup: false,
@@ -68,7 +68,7 @@ $(document).ready(function() {
 
     $('form.new_comment').validate({
       errorElement: 'span',
-        errorClass: 'error-color',
+        errorClass: 'span-block error-color',
         focusInvalid: false,
         onclick: false,
         onkeyup: false,
