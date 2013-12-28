@@ -47,3 +47,5 @@ end
 gem "devise"
 
 gem "bootstrap-sass-rails"
+
+gem 'rails_12factor', group: :production
